@@ -1,0 +1,10 @@
+Spring也提供了一套好用的基于观察者模式的事件发布机制，
+在Spring中，我们只需要将Spring管理的Bean的方法上面加上@EventListener注解，就可以将其标记为一个观察者，
+可以使用ApplicationContext上下文来进行事件通知，
+从下面的代码中我们可以看到，
+ApplicationContext接口继承了ApplicationEventPublisher接口，可以调用publishEvent来进行事件发布，
+给关注该事件的观察者发送消息，实际上ApplicationContext就相当于消息总线。
+
+监听器定义，注意这里要加上@Component注解，可以注意到，这里使用了@Async注解，表示方法是异步执行的，这样就可以实现事件的异步发布通知啦！
+当然你可以指定自定义的线程池，如果你也使用的SpringBoot，不要忘记在启动类加上@EnableAsync注解。
+
