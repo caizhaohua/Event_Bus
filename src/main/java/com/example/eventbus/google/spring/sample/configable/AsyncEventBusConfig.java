@@ -10,7 +10,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * @className: AsyncEventBusConfig
  * @author: czh
  * @date: 2023/4/22
- * @description: 事件注入中心
+ * @description: 事件注入配置
  * @version: 1.0.0
  **/
 @Configuration

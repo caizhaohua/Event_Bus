@@ -21,7 +21,7 @@ public class TestMain {
         eventBus.register(eventListener);
 
         System.out.println("step 4------------TestMain main eventBus post event: eventBus.post(new MessageEvent(\"消息同步发送\" + i))");
-        for (int i=0; i<5; i++) {
+        for (int i=0; i<2; i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

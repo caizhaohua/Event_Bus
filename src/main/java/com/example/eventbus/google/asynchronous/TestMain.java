@@ -13,7 +13,6 @@ import java.util.concurrent.Executor;
  **/
 public class TestMain {
 
-
     public static void main(String[] args) throws InterruptedException {
 
         System.out.println("step 1------------TestMain main create executor .");
@@ -33,7 +32,7 @@ public class TestMain {
         eventBus.register(listener);
 
         System.out.println("step 5------------TestMain main eventbus post event:  eventBus.post(new MessageEvent(\"异步消息\" + i)); .");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("-----------------TestMain main eventBus post event message.");
             eventBus.post(new MessageEvent("异步消息" + i));
 
